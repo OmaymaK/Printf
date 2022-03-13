@@ -17,7 +17,12 @@ int print_char(va_list arg)
 int print_string(va_list arg)
 {
 	int i = 0;
+<<<<<<< HEAD
 	char *s = va_arg(arg, char *);
+=======
+	char *s = va_arg(arg, char*);
+
+>>>>>>> dd2610b4e5f7337488281dcff3ae0c50ec77d9ed
 	while (s[i] != '\0')
 	{
 		_putchar(*s);
@@ -30,9 +35,13 @@ int print_string(va_list arg)
  * @arg: attribute unused
  * Return: 1
  */
-int print_perc(va_list arg)
+int print_perc(va_list arg __attribute__((unused)))
 {
+<<<<<<< HEAD
 	void(arg);
 		_putchar('%');
+=======
+	_putchar('%');
+>>>>>>> dd2610b4e5f7337488281dcff3ae0c50ec77d9ed
 	return (1);
 }
