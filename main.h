@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <unistd.h>
 #include <limits.h>
 #include <stdio.h>
 #include <stdarg.h>
@@ -8,18 +9,20 @@
 
 /**
  * struct printf - structure to chose the format to be printed
- * @ch: The character  
+ * @ch: The character
  * @func: The function associated to that character
  */
+typedef struct printf
 {
 	char ch;
 	int (*func)(va_list);
 } printf_t;
 
-/* functions prototype */
+/* functions prototype*/
 
-int _printf(const char *format, ...);
 int _putchar(char c);
+int _printf(const char *type, ...);
+int format_check(const char s, va_list ap);
 
 /* Created functions prototype */
 

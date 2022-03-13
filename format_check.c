@@ -5,7 +5,7 @@
  * @ap: argument
  * Return: length of string or 1 or 0 or -1 if error
  */
-int format_check (const char s, va_list ap)
+int format_check(const char s, va_list ap)
 {
 	int i = 0;
 	int len = 0;
@@ -14,9 +14,8 @@ int format_check (const char s, va_list ap)
 		{'c', print_char},
 		{'s', print_string},
 		{'%', print_perc},
-		{NULL, NULL},
 	};
-	while (cha[i].ch != NULL)
+	while (cha[i].ch != 0)
 	{
 		if (cha[i].ch == s)
 		{
