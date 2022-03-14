@@ -16,6 +16,7 @@ int format_check(const char s, va_list ap)
 		{'%', print_perc},
 		{'d', print_int},
 		{'i', print_int},
+		{'b', print_binary},
 	};
 	while (cha[i].ch != 0)
 	{

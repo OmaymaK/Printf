@@ -39,7 +39,7 @@ int print_perc(va_list arg __attribute__((unused)))
 /**
  * print_int - prints integer
  * @arg: the integer to print
- * Return: number of numbers printed
+ * Return: number of printed numbers
  */
 int print_int(va_list arg)
 {
@@ -63,6 +63,39 @@ int print_int(va_list arg)
 		n = (n % rest);
 		rest = rest / 10;
 		len++;
+	}
+	return (len);
+}
+/**
+ * print_binary - convert an integer to binary 
+ * @arg: arguments
+ * Return: number of printed elements (len)
+ */
+int print_binary(va_list arg)
+{
+	unsigned int b[32];
+	int i = 0;
+	unsigned int num = 0, len = 0;
+
+	num = va_arg(arg, unsigned int);
+	if (num <= 1)
+	{
+		_putchar(num + '0');
+		len++;
+	}
+	else
+	{
+		while (num > 0)
+		{
+			b[i] = num % 2;
+			num = num / 2;
+			i++;
+		}
+		for (i = i - 1; i >= 0; i--)
+		{
+			_putchar(b[i] + '0');
+			len++;
+		}
 	}
 	return (len);
 }
