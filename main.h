@@ -26,6 +26,7 @@ int format_check(const char s, va_list ap);
 
 /* Created functions prototype */
 
+int print_p(va_list arg);
 int print_X(va_list arg);
 int print_x(va_list arg);
 int print_octal(va_list arg);

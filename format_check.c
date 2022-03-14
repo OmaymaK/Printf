@@ -21,6 +21,7 @@ int format_check(const char s, va_list ap)
 		{'o', print_octal},
 		{'x', print_x},
 		{'X', print_X},
+		{'p', print_p},
 	};
 	while (cha[i].ch != 0)
 	{

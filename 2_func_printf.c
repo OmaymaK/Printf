@@ -119,3 +119,46 @@ int print_X(va_list arg)
         }
         return (len);
 }
+/**
+ * print_p - prints a string and returns the length of string
+ * @arg: arguments
+ * Return: number of printed characters
+ */
+int print_p(va_list arg)
+{
+	unsigned long hex[20], n = 0;
+	unsigned int len = 0;
+	int i = 0;
+
+	n = va_arg(arg, unsigned long);
+	if (n == 0)
+	{
+		_putchar('(');
+		_putchar('n');
+		_putchar('i');
+		_putchar('l');
+		_putchar(')');
+		len += 5;
+	}
+	else if (n > 0)
+	{
+	_putchar('0');
+	_putchar('x');
+	len += 2;
+	while (n > 0)
+	{
+		if (n % 16 >= 10 && n % 16 <= 15)
+			hex[i] = 87 + (n % 16);
+		else
+			hex[i] = 48 + (n % 16);
+		n = n / 16;
+		i++;
+	}
+	for (i = i - 1; i >= 0; i--)
+	{
+		_putchar(hex[i]);
+		len++;
+	}
+	}
+	return (len);
+}
