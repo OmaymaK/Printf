@@ -13,12 +13,12 @@ int print_char(va_list arg)
  * print_string - prints the string
  * @arg: the string to be printed
  * Return: length of the string
- */     
+ */
 int print_string(va_list arg)
 {
 	int i = 0;
 	char *s = va_arg(arg, char*);
-	
+
 	while (s[i] != '\0')
 	{
 		_putchar(s[i]);
