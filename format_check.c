@@ -14,6 +14,8 @@ int format_check(const char s, va_list ap)
 		{'c', print_char},
 		{'s', print_string},
 		{'%', print_perc},
+		{'d', print_int},
+		{'i', print_int},
 	};
 	while (cha[i].ch != 0)
 	{

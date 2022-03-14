@@ -36,3 +36,33 @@ int print_perc(va_list arg __attribute__((unused)))
 	_putchar('%');
 	return (1);
 }
+/**
+ * print_int - prints integer
+ * @arg: the integer to print
+ * Return: number of numbers printed
+ */
+int print_int(va_list arg)
+{
+	unsigned int num = va_arg(arg, int);
+	int len = 0, rest = 1;
+	int n = num;
+
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+		len++;
+	}
+	while ((n / rest) > 9)
+	{
+		rest = rest * 10;
+	}
+	while (rest > 0)
+	{
+		_putchar (n / rest + '0');
+		n = (n % rest);
+		rest = rest / 10;
+		len++;
+	}
+	return (len);
+}

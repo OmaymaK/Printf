@@ -26,6 +26,7 @@ int format_check(const char s, va_list ap);
 
 /* Created functions prototype */
 
+int print_int(va_list arg);
 int print_char(va_list arg);
 int print_string(va_list arg);
 int print_perc(va_list arg);
