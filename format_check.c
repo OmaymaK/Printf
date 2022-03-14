@@ -17,6 +17,10 @@ int format_check(const char s, va_list ap)
 		{'d', print_int},
 		{'i', print_int},
 		{'b', print_binary},
+		{'u', print_unsigned},
+		{'o', print_octal},
+		{'x', print_x},
+		{'X', print_X},
 	};
 	while (cha[i].ch != 0)
 	{

@@ -26,6 +26,10 @@ int format_check(const char s, va_list ap);
 
 /* Created functions prototype */
 
+int print_X(va_list arg);
+int print_x(va_list arg);
+int print_octal(va_list arg);
+int print_unsigned(va_list arg);
 int print_binary(va_list arg);
 int print_int(va_list arg);
 int print_char(va_list arg);
