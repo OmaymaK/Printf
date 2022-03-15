@@ -21,11 +21,11 @@ typedef struct printf
 /* functions prototype*/
 
 int _putchar(char c);
-int _printf(const char *type, ...);
+int _printf(const char *format, ...);
 int format_check(const char s, va_list ap);
 
 /* Created functions prototype */
-int print_r(va_list arg);
+int print_rev(va_list arg);
 int print_p(va_list arg);
 int print_X(va_list arg);
 int print_x(va_list arg);

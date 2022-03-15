@@ -69,7 +69,7 @@ int print_int(va_list arg)
 	return (len);
 }
 /**
- * print_binary - convert an integer to binary 
+ * print_binary - convert an integer to binary
  * @arg: arguments
  * Return: number of printed elements (len)
  */
