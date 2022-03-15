@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	int i = 0;
 	int len = 0;
 	int func = 0;
-	
+
 	va_start(arg, format);
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 	return (-1);
