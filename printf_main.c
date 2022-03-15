@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _printf - prints everything (printf)
- * @type: checks the type to be printed
+ * @format: checks the type to be printed
  * Return: len
  */
 int _printf(const char *format, ...)
