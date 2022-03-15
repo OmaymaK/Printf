@@ -22,7 +22,7 @@ int format_check(const char s, va_list ap)
 		{'x', print_x},
 		{'X', print_X},
 		{'p', print_p},
-		{'r', print_r},
+		{'r', print_rev},
 	};
 	while (cha[i].ch != 0)
 	{

@@ -11,9 +11,13 @@ int _printf(const char *type, ...)
 	int len = 0;
 	int func = 0;
 
+	if (type == NULL)
+		return (-1);
+	va_start(arg, type);
+	if (arg == NULL)
+		return (-1);
 	if (!type || (type[0] == '%' && type[1] == '\0'))
 	return (-1);
-	va_start(arg, type);
 	while (*(type + i) && type)
 	{
 		if (*(type + i) != '%')
