@@ -45,11 +45,11 @@ int print_perc(va_list arg __attribute__((unused)))
  */
 int print_int(va_list arg)
 {
-	unsigned int num = va_arg(arg, int);
+	int num = va_arg(arg, int);
 	int len = 0, rest = 1;
-	int n = num;
+	unsigned int n = num;
 
-	if (n < 0)
+	if (num < 0)
 	{
 		_putchar('-');
 		n = -n;
