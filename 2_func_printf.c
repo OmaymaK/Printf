@@ -74,7 +74,8 @@ int print_x(va_list arg)
 	{
 		if (num % 16 >= 10 && num % 16 <= 15)
 			hex[i] = (87 + num % 16);
-		else 
+
+		else
 			hex[i] = ('0' + num % 16);
 		num = num / 16;
 		i++;
@@ -93,31 +94,31 @@ int print_x(va_list arg)
  */
 int print_X(va_list arg)
 {
-        char hex[20];
-        unsigned int len = 0, num = 0;
-        int i = 0;
+	char hex[20];
+	unsigned int len = 0, num = 0;
+	int i = 0;
 
-        num = va_arg(arg, unsigned int);
-        if (num == 0)
-        {
-                _putchar(0 + '0');
-                len++;
-        }
-        while (num > 0)
-        {
-                if (num % 16 >= 10 && num % 16 <= 15)
-                        hex[i] = (55 + num % 16);
-                else
-                        hex[i] = ('0' + num % 16);
-                num = num / 16;
-                i++;
-        }
-        for (i = i - 1; i >= 0; i--)
-        {
-                _putchar(hex[i]);
-                len++;
-        }
-        return (len);
+	num = va_arg(arg, unsigned int);
+	if (num == 0)
+	{
+		_putchar(0 + '0');
+		len++;
+	}
+		while (num > 0)
+	{
+		if (num % 16 >= 10 && num % 16 <= 15)
+			hex[i] = (55 + num % 16);
+		else
+			hex[i] = ('0' + num % 16);
+		num = num / 16;
+		i++;
+	}
+	for (i = i - 1; i >= 0; i--)
+	{
+		_putchar(hex[i]);
+		len++;
+	}
+	return (len);
 }
 /**
  * print_p - prints a string and returns the length of string
@@ -158,7 +159,6 @@ int print_p(va_list arg)
 	{
 		_putchar(hex[i]);
 		len++;
-	}
 	}
 	return (len);
 }
