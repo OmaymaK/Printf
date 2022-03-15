@@ -24,9 +24,17 @@ int _printf(const char *format, ...)
 		if (*(format + i) == '%')
 		{
 			func = format_check(*(format + (i + 1)), arg);
+			if (func == -1)
+			{
+				_putchar('%');
+				len += 1;
+			}
+			else
+			{
 				len = len + func;
 				i = i + 2;
 				continue;
+			}
 			if (*(format + (i + 1)) == '\0')
 			{
 				_putchar(*(format + i));
