@@ -33,5 +33,5 @@ int format_check(const char s, va_list ap)
 		}
 		i++;
 	}
-	return (0);
+	return (-1);
 }
